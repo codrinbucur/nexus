@@ -93,7 +93,7 @@ objects:
         volumes:
         - name: ${SERVICE_NAME}-data
           persistentVolumeClaim:
-            claimName: ${SERVICE_NAME}-pv
+            claimName: ${SERVICE_NAME}-pvc
     test: false
     triggers:
     - type: ConfigChange
@@ -139,7 +139,7 @@ objects:
   metadata:
     labels:
       app: ${SERVICE_NAME}
-    name: ${SERVICE_NAME}-pv
+    name: ${SERVICE_NAME}-pvc
   spec:
     accessModes:
     - ReadWriteOnce
