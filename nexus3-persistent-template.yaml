@@ -33,8 +33,6 @@ objects:
     strategy:
       type: Recreate
       recreateParams: 
-        pre: {} 
-        mid: {}
         post:
           failurePolicy: Abort
           execNewPod:
