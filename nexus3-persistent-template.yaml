@@ -18,7 +18,7 @@ objects:
     tags:
     - from:
         kind: DockerImage
-        name: registry.connect.redhat.com/sonatype/nexus-repository-manager:${NEXUS_VERSION}
+        name: sonatype/nexus3:${NEXUS_VERSION}
       name: ${NEXUS_VERSION}
 - apiVersion: v1
   kind: DeploymentConfig
@@ -156,8 +156,8 @@ parameters:
   displayName: Sonatype Nexus version
   name: NEXUS_VERSION
   required: true
-  value: 3.4.0-01-rhel
+  value: 3.6.2
 - description: Volume space available for Sonatype Nexus e.g. 512Mi, 2Gi
   name: VOLUME_CAPACITY
   required: true
-  value: 10Gi
+  value: 4Gi
