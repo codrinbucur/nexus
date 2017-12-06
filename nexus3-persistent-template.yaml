@@ -78,7 +78,11 @@ objects:
             periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 1
-          resources: {}
+          resources:
+            requests:
+              memory: 1Gi 
+            limits:
+              memory: 2Gi
           terminationMessagePath: /dev/termination-log
           volumeMounts:
           - mountPath: /nexus-data
